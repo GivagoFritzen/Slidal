@@ -1,0 +1,84 @@
+.slidal {
+    width: 100%;
+}
+
+.slidal>h1 {
+    margin: 0;
+}
+
+.slidal>.slider>span {
+    align-items: center;
+    display: flex;
+    /* You can change this value*/
+    height: 150px;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.slidal>.arrows {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.slidal>.arrows>.arrow {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+/* Celphone */
+@media only screen and (max-width: 768px) {
+    .slidal>.arrows>.arrow {
+        flex-basis: 40%;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 435px) {
+    .slidal>.arrows>.arrow {
+        flex-basis: 100%;
+    }
+}
+
+/* Transition */
+/* Right to Left */
+.slide--transition--left-enter {
+    transform: translateX(100vw);
+}
+
+.slide--transition--left-enter.slide--transition--left-enter-active {
+    transform: translateX(0vw);
+    transition: transform 500ms ease-in-out;
+}
+
+.slide--transition--left-leave {
+    transform: translateX(100vw);
+}
+
+.slide--transition--left-leave.slide--transition--left-leave-active {
+    transform: translateX(-100vw);
+    transition: transform 500ms ease-in-out;
+}
+
+/* Left to Right */
+.slide--transition--right-enter {
+    transform: translateX(-100vw);
+}
+
+.slide--transition--right-enter.slide--transition--right-enter-active {
+    transform: translateX(0vw);
+    transition: transform 500ms ease-in-out;
+}
+
+.slide--transition--right-leave {
+    transform: translateX(0vw);
+}
+
+.slide--transition--right-leave.slide--transition--right-leave-active {
+    transform: translateX(100vw);
+    transition: transform 500ms ease-in-out;
+}

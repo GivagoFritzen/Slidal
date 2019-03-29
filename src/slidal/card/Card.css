@@ -1,0 +1,13 @@
+.slidal--card {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.slidal--card>img,
+.slidal--card>svg {
+    max-width: 50px;
+}

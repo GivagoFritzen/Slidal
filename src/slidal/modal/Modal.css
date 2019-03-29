@@ -1,0 +1,47 @@
+.slidal--modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99999;
+}
+
+.slidal--modal>.content {
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 40px 5% 2.5% 5%;
+    position: relative;
+    margin: 10vh 4%;
+}
+
+.slidal--modal>.content>.close--button {
+    cursor: pointer;
+    height: 2%;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+}
+
+.slidal--modal>.content>.slidal--card {
+    flex-basis: 25%;
+}
+
+/* Celphone */
+@media only screen and (max-width: 768px) {
+    .slidal--modal>.content>.slidal--card {
+        flex-basis: 40%;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 435px) {
+    .slidal--modal>.content>.slidal--card {
+        flex-basis: 100%;
+    }
+}
