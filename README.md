@@ -58,30 +58,6 @@ class App extends Component {
             <h2>8</h2>
             <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
           </Slidal.Card>
-          <Slidal.Card>
-            <h2>9</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>10</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>11</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>12</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>13</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>14</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
         </Slidal>
       </div>
     );
