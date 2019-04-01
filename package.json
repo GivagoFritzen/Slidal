@@ -3,8 +3,9 @@
   "description": "Slider + Modal",
   "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
   "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "i": "^0.3.6",
     "npm": "^6.9.0",
     "prop-types": "^15.7.2",
@@ -13,18 +14,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "devDependencies": {
     "babel-cli": "6.x",
     "react": "16.x",
@@ -35,8 +27,6 @@
     "react": "16.x",
     "react-dom": "16.x"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "files": [
     "dist",
     "README.md"
