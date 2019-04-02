@@ -3,13 +3,7 @@
 **npm**
 
 ```bash
-npm install ####### --save
-```
-
-**yarn**
-
-```bash
-yarn add #######
+npm install slidal --save
 ```
 
 ### [PlayGround](https://google.com.br)
@@ -27,36 +21,8 @@ class App extends Component {
       <div className="App">
         <Slidal showButton title="Title" amountCardMobile={3} amountCardTablet={4} amountCardDesktop={5}>
           <Slidal.Card>
-            <h2>1</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>2</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>3</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>4</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>5</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>6</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>7</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
-          </Slidal.Card>
-          <Slidal.Card>
-            <h2>8</h2>
-            <img src="https://udemy-images.udemy.com/course/750x422/1362070_b9a1_2.jpg" alt="teste" />
+            <h2>TITLE</h2>
+            <img src="https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Test" />
           </Slidal.Card>
         </Slidal>
       </div>

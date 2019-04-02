@@ -4,7 +4,6 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import LeftArrow from './images/left-arrow.svg'
 import RightArrow from './images/right-arrow.svg'
 
-
 import Button from './button/Button'
 import Card from './card/Card'
 import Modal from './modal/Modal'
