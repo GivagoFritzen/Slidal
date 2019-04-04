@@ -4,6 +4,7 @@
 
 .slidal>h1 {
     margin: 0;
+    text-align: center;
 }
 
 .slidal>.slider>span {

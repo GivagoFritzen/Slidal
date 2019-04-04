@@ -213,27 +213,31 @@ class Slidal extends Component {
   }
 
   _goToPrevSlide = () => {
-    const size = this.props.children.length
-    const { currentIndex } = this.state
-    const currentAmount = this._getAmountCard()
+    if (this.props.children !== undefined && this.props.children !== null) {
+      const size = this.props.children.length || this.props.children.props.children.length
+      const { currentIndex } = this.state
+      const currentAmount = this._getAmountCard()
 
-    if (((currentIndex + 1) * currentAmount) > currentAmount) {
-      this.setState(() => ({ currentIndex: currentIndex - 1, animationDirection: 'left' }))
-    } else {
-      const lastCard = Math.ceil(size / ((currentIndex + 1) * currentAmount))
-      this.setState(() => ({ currentIndex: (lastCard - 1), animationDirection: 'left' }))
+      if (((currentIndex + 1) * currentAmount) > currentAmount) {
+        this.setState(() => ({ currentIndex: currentIndex - 1, animationDirection: 'left' }))
+      } else {
+        const lastCard = Math.ceil(size / ((currentIndex + 1) * currentAmount))
+        this.setState(() => ({ currentIndex: (lastCard - 1), animationDirection: 'left' }))
+      }
     }
   }
 
   _goToNextSlide = () => {
-    const size = this.props.children.length
-    const { currentIndex } = this.state
-    const currentAmount = this._getAmountCard()
+    if (this.props.children !== undefined && this.props.children !== null) {
+      const size = this.props.children.length || this.props.children.props.children.length
+      const { currentIndex } = this.state
+      const currentAmount = this._getAmountCard()
 
-    if (((currentIndex + 1) * currentAmount) < size) {
-      this.setState(() => ({ currentIndex: currentIndex + 1, animationDirection: 'right' }))
-    } else {
-      this.setState(() => ({ currentIndex: 0, animationDirection: 'right' }))
+      if (((currentIndex + 1) * currentAmount) < size) {
+        this.setState(() => ({ currentIndex: currentIndex + 1, animationDirection: 'right' }))
+      } else {
+        this.setState(() => ({ currentIndex: 0, animationDirection: 'right' }))
+      }
     }
   }
 
