@@ -1,6 +1,6 @@
 {
   "name": "slidal",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Slider + Modal",
   "author": "Givago Fritzen",
   "license": "MIT",
@@ -64,7 +64,8 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "style-loader": "^0.23.1"
   },
   "files": [
     "dist",

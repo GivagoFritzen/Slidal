@@ -1,13 +1,29 @@
+const path = require('path')
+
 module.exports = {
+  entry: './src/index.js',
+
+  output: {
+    filename: 'main.js',
+    path: path.resolve('dist')
+  },
+
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: ['to-string-loader', 'css-loader'],
-        options: {
-          cacheDirectory: true
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
         }
+      },
+
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   }
