@@ -82,3 +82,87 @@
     transform: translateX(100vw);
     transition: transform 500ms ease-in-out;
 }
+
+/* MODAL */
+.slidal--modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99999;
+}
+
+.slidal--modal>.content {
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 40px 5% 2.5% 5%;
+    position: relative;
+    margin: 10vh 4%;
+}
+
+.slidal--modal>.content>.close--button {
+    cursor: pointer;
+    height: 2%;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+}
+
+.slidal--modal>.content>.slidal--card {
+    flex-basis: 25%;
+}
+
+/* Celphone */
+@media only screen and (max-width: 768px) {
+    .slidal--modal>.content>.slidal--card {
+        flex-basis: 40%;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 435px) {
+    .slidal--modal>.content>.slidal--card {
+        flex-basis: 100%;
+    }
+}
+
+/* CARD */
+.slidal--card {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.slidal--card>img,
+.slidal--card>svg {
+    max-width: 50px;
+}
+
+/* BUTTON */
+.slidal--button {
+    background-color: white;
+    border: 2px solid #e7e7e7;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+.slidal--button:hover {
+    background-color: #555555;
+    color: white;
+}
