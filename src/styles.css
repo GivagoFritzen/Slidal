@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-.slidal>.slider>span {
+.slidal>.slider>div {
     align-items: center;
     display: flex;
     /* You can change this value*/
@@ -56,11 +56,11 @@
     transition: transform 500ms ease-in-out;
 }
 
-.slide--transition--left-leave {
+.slide--transition--left-exit {
     transform: translateX(100vw);
 }
 
-.slide--transition--left-leave.slide--transition--left-leave-active {
+.slide--transition--left-exit.slide--transition--left-exit-active {
     transform: translateX(-100vw);
     transition: transform 500ms ease-in-out;
 }
@@ -75,11 +75,11 @@
     transition: transform 500ms ease-in-out;
 }
 
-.slide--transition--right-leave {
+.slide--transition--right-exit {
     transform: translateX(0vw);
 }
 
-.slide--transition--right-leave.slide--transition--right-leave-active {
+.slide--transition--right-exit.slide--transition--right-exit-active {
     transform: translateX(100vw);
     transition: transform 500ms ease-in-out;
 }

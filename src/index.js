@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import { CSSTransitionGroup } from 'react-transition-group'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 import LeftArrow from './images/left-arrow.svg'
 import RightArrow from './images/right-arrow.svg'
@@ -289,22 +289,33 @@ class Slidal extends Component {
 
     if (currentAmount) {
       component = (
-        <CSSTransitionGroup
-          transitionName={this._getSlideDirection()}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
+        <TransitionGroup>
 
           {React.Children.map(children, (child, i) => {
             if (i < ((currentIndex + 1) * currentAmount) &&
               i >= ((currentIndex) * currentAmount)) {
               if (child.type === Card) {
-                return React.cloneElement(child, { showModal: () => this.setState(() => ({ item: child, subModal: true })) })
+                return (
+                  <CSSTransition
+                    classNames={this._getSlideDirection()}
+                    timeout={{ enter: 500, exit: 300 }}
+                  >
+                    {React.cloneElement(child, { showModal: () => this.setState(() => ({ item: child, subModal: true })) })}
+                  </CSSTransition>
+                )
               }
 
-              return child
+              return (
+                <CSSTransition
+                  classNames={this._getSlideDirection()}
+                  timeout={{ enter: 500, exit: 300 }}
+                >
+                  {child}
+                </CSSTransition>
+              )
             }
           })}
-        </CSSTransitionGroup>
+        </TransitionGroup>
       )
     }
 
