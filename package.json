@@ -1,6 +1,6 @@
 {
   "name": "slidal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Slider + Modal",
   "author": "Givago Fritzen",
   "license": "MIT",
@@ -72,7 +72,6 @@
   ],
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react-dom:": "^15.0.0 || ^16.0.0",
     "react-transition-group": "^2.7.0"
   }
 }

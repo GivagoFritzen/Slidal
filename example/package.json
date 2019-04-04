@@ -6,7 +6,6 @@
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-dom:": "^15.0.0 || ^16.0.0",
     "react-scripts": "^1.1.4",
     "react-transition-group": "^2.7.0",
     "slidal": "file:.."
