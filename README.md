@@ -15,12 +15,13 @@ npm install --save slidal
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'slidal'
+import Slidal from 'slidal'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+            <Slidal showButton={true} title="Title" amountCardMobile={3}
+        amountCardTablet={4} amountCardDesktop={5} />
     )
   }
 }
@@ -28,4 +29,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [Givago Fritzen](https://github.com/Givago Fritzen)
+MIT (https://opensource.org/licenses/MIT)
