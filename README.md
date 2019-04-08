@@ -51,4 +51,4 @@ class Example extends Component {
 
 ## License
 
-MIT (https://opensource.org/licenses/MIT)
+[MIT] (https://opensource.org/licenses/MIT)
