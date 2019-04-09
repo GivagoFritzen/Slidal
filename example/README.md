@@ -1,3 +1,9 @@
+# slidal
+
+> slider + modal
+
+[![NPM](https://img.shields.io/npm/v/slidal.svg)](https://www.npmjs.com/package/slidal) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ### Installation
 
 **npm**
