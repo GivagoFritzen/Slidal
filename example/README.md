@@ -6,9 +6,8 @@
 npm install slidal --save
 ```
 
-### [PlayGround](https://google.com.br)
-
 ### Example
+[PlayGround](https://codesandbox.io/s/62y3vok73)
 
 ```js
 import React, { Component } from 'react';
