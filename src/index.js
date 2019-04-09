@@ -7,7 +7,7 @@ import LeftArrow from './images/left-arrow.svg'
 import RightArrow from './images/right-arrow.svg'
 import CloseButton from './images/cancel.svg'
 
-import './styles.css'
+import style from './styles.css'
 
 class Button extends Component {
   static propTypes = {
@@ -22,7 +22,7 @@ class Button extends Component {
 
     if (text) {
       component = (
-        <button className='slidal--button' onClick={onClick}>
+        <button className={style.slidalButton} onClick={onClick}>
           {text}
         </button>
       )
@@ -50,7 +50,7 @@ class Card extends Component {
     const children = this.props.children
 
     return (
-      <div className='slidal--card' onClick={() => this._openModal()}>
+      <div className={style.slidalCard} onClick={() => this._openModal()}>
         {React.Children.map(children, (child) => {
           return child
         })}
@@ -114,9 +114,9 @@ class Modal extends Component {
 
     if (showModal) {
       return ReactDOM.createPortal(
-        <div className='slidal--modal' onClick={event => this._handleClickOverlayHide(event)}>
-          <div className='content'>
-            <img src={CloseButton} className='close--button' alt='close button' onClick={() => this._closeModal()} />
+        <div className={style.slidalModal} onClick={event => this._handleClickOverlayHide(event)}>
+          <div className={style.content}>
+            <img src={CloseButton} className={style.closeButton} alt='close button' onClick={() => this._closeModal()} />
             {this.renderContent()}
           </div>
         </div>,
@@ -206,9 +206,9 @@ class Slidal extends Component {
     const { animationDirection } = this.state
 
     if (animationDirection === 'left') {
-      return 'slide--transition--right'
+      return 'slideTransitionRight'
     } else {
-      return 'slide--transition--left'
+      return 'slideTransitionLeft'
     }
   }
 
@@ -245,19 +245,19 @@ class Slidal extends Component {
     const { title, showButton } = this.props
 
     return (
-      <div className='slidal'>
+      <div className={style.slidal}>
         {this.renderModal()}
 
         {title ? <h1>{title}</h1> : null}
 
-        <div className='slider'>
+        <div className={style.slider}>
           {this.renderSlider()}
         </div>
 
-        <div className='arrows'>
-          <img src={LeftArrow} className='arrow' alt='Leaft Arrow' onClick={this._goToPrevSlide} />
+        <div className={style.arrows}>
+          <img src={LeftArrow} className={style.arrow} alt='Leaft Arrow' onClick={this._goToPrevSlide} />
           {showButton ? <Button text='Ver mais' onClick={() => this.setState(() => ({ showModal: true }))} /> : null}
-          <img src={RightArrow} className='arrow' alt='Right Arrow' onClick={this._goToNextSlide} />
+          <img src={RightArrow} className={style.arrow} alt='Right Arrow' onClick={this._goToNextSlide} />
         </div>
       </div>
     )
